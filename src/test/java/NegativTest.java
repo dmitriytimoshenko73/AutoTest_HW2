@@ -1,4 +1,5 @@
 import org.junit.Test;
+//нет зависимости с Mockito в pom файле
 import org.mockito.Mockito;
 public class NegativTest {
 }
@@ -11,9 +12,11 @@ public class NegativTest {
         Component mockComponent = Mockito.mock(Component.class);
 
         // Добавляем мок объект в составной узел
+        //у класса Component нет метода add
         composite.add(mockComponent);
 
         // Удаляем мок объект из составного узла
+        //у класса Component нет метода remove
         composite.remove(mockComponent);
 
         // Проверяем, что метод operation() вызывается у составного узла
